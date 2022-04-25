@@ -1,5 +1,6 @@
 // 0-1 Knapsack
 //Dynamic Programming
+//Omar Osman
 
 #include <bits/stdc++.h>
 using namespace std;
