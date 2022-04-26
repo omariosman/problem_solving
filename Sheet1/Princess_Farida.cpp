@@ -1,28 +1,28 @@
-//Knapsack
+//Princess Farida
+//Status: Accepted
 //Omar Osman
-//Status: TLE
 
 #include <bits/stdc++.h>
 using namespace std;
 
 typedef long long ll;
 
-int dp[(int)1e7+5];
-int W[(int)1e4+5];
+long long dp[(int)1e4+5];
+long long W[(int)1e4+5];
 ll n, k, d;
 
-int knapsack(ll i){
+long long knapsack(ll i){
     
-    if(i == n){
+    if(i >= n){
         return 0;
     }
     
-    int &ret = dp[i];
+    long long &ret = dp[i];
     if(~ret){
         return ret;
     }
     ret = 0;
-    return ret = max(knapsack(i+1) + 0, knapsack(i+1) + W[i]);
+    return ret = max(knapsack(i+1) + 0, knapsack(i+2) + W[i]);
     
     
 }
@@ -36,13 +36,13 @@ int main()
         ctr++;
         
         memset(dp, -1, sizeof(dp));
-        memset(W, 0, sizeof(W));
+        //memset(W, 0, sizeof(W));
         cin >> n;
         for(int i = 0; i < n; i++){
             cin >> W[i];
         }
         
-        cout << "Case: " << ctr << ": " << knapsack(0) << "\n";
+        cout << "Case " << ctr << ": " << knapsack(0) << "\n";
 
         
     }
