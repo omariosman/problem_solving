@@ -5,6 +5,7 @@
   - the weight = the value
 /*
 //Omar Osman
+//Status: Accepted
 
 #include <bits/stdc++.h>
 using namespace std;
